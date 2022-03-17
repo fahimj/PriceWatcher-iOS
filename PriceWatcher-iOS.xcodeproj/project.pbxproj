@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5627E385F200AAC862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		CF5C7C5B27E385F300AAC862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF5C7C5E27E385F300AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF5C7C6027E385F300AAC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 		CF5C7C4627E385F200AAC862 = {
 			isa = PBXGroup;
 			children = (
-				CF5C7C5127E385F200AAC862 /* PriceWatcher iOS */,
+				CF5C7C5127E385F200AAC862 /* PriceWatcher-iOS */,
 				CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */,
 				CF5C7C5027E385F200AAC862 /* Products */,
 			);
@@ -69,13 +69,13 @@
 		CF5C7C5027E385F200AAC862 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */,
-				CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */,
+				CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */,
+				CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF5C7C5127E385F200AAC862 /* PriceWatcher iOS */ = {
+		CF5C7C5127E385F200AAC862 /* PriceWatcher-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CF5C7C5227E385F200AAC862 /* AppDelegate.swift */,
@@ -86,7 +86,7 @@
 				CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */,
 				CF5C7C6027E385F300AAC862 /* Info.plist */,
 			);
-			path = "PriceWatcher iOS";
+			path = "PriceWatcher-iOS";
 			sourceTree = "<group>";
 		};
 		CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */ = {
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */ = {
+		CF5C7C4E27E385F200AAC862 /* PriceWatcher-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOS" */;
+			buildConfigurationList = CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher-iOS" */;
 			buildPhases = (
 				CF5C7C4B27E385F200AAC862 /* Sources */,
 				CF5C7C4C27E385F200AAC862 /* Frameworks */,
@@ -112,14 +112,14 @@
 			);
 			dependencies = (
 			);
-			name = "PriceWatcher iOS";
+			name = "PriceWatcher-iOS";
 			productName = "PriceWatcher iOS";
-			productReference = CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */;
+			productReference = CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF5C7C6427E385F300AAC862 /* PriceWatcher iOSTests */ = {
+		CF5C7C6427E385F300AAC862 /* PriceWatcher-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSTests" */;
+			buildConfigurationList = CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher-iOSTests" */;
 			buildPhases = (
 				CF5C7C6127E385F300AAC862 /* Sources */,
 				CF5C7C6227E385F300AAC862 /* Frameworks */,
@@ -130,9 +130,9 @@
 			dependencies = (
 				CF5C7C6727E385F300AAC862 /* PBXTargetDependency */,
 			);
-			name = "PriceWatcher iOSTests";
+			name = "PriceWatcher-iOSTests";
 			productName = "PriceWatcher iOSTests";
-			productReference = CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */;
+			productReference = CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher iOS" */;
+			buildConfigurationList = CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher-iOS" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,8 +167,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */,
-				CF5C7C6427E385F300AAC862 /* PriceWatcher iOSTests */,
+				CF5C7C4E27E385F200AAC862 /* PriceWatcher-iOS */,
+				CF5C7C6427E385F300AAC862 /* PriceWatcher-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,7 +217,7 @@
 /* Begin PBXTargetDependency section */
 		CF5C7C6727E385F300AAC862 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */;
+			target = CF5C7C4E27E385F200AAC862 /* PriceWatcher-iOS */;
 			targetProxy = CF5C7C6627E385F300AAC862 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -382,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -410,7 +410,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -430,7 +430,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher iOS.app/PriceWatcher iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher-iOS.app/PriceWatcher-iOS";
 			};
 			name = Debug;
 		};
@@ -450,14 +450,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher iOS.app/PriceWatcher iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher-iOS.app/PriceWatcher-iOS";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher iOS" */ = {
+		CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF5C7C7727E385F300AAC862 /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOS" */ = {
+		CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF5C7C7A27E385F300AAC862 /* Debug */,
@@ -475,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSTests" */ = {
+		CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF5C7C7D27E385F300AAC862 /* Debug */,
