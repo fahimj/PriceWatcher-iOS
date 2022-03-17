@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5227E385F200AAC862 /* AppDelegate.swift */; };
+		CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */; };
+		CF5C7C5727E385F200AAC862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5627E385F200AAC862 /* ViewController.swift */; };
+		CF5C7C5A27E385F200AAC862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5827E385F200AAC862 /* Main.storyboard */; };
+		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
+		CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */; };
+		CF5C7C6A27E385F300AAC862 /* PriceWatcher_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */; };
+		CF5C7C7427E385F300AAC862 /* PriceWatcher_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C7327E385F300AAC862 /* PriceWatcher_iOSUITests.swift */; };
+		CF5C7C7627E385F300AAC862 /* PriceWatcher_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C7527E385F300AAC862 /* PriceWatcher_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF5C7C6627E385F300AAC862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5C7C4727E385F200AAC862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5C7C4E27E385F200AAC862;
+			remoteInfo = "PriceWatcher iOS";
+		};
+		CF5C7C7027E385F300AAC862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5C7C4727E385F200AAC862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5C7C4E27E385F200AAC862;
+			remoteInfo = "PriceWatcher iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF5C7C5627E385F200AAC862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF5C7C5927E385F200AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF5C7C5B27E385F300AAC862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF5C7C5E27E385F300AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF5C7C6027E385F300AAC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSTests.swift; sourceTree = "<group>"; };
+		CF5C7C6F27E385F300AAC862 /* PriceWatcher iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5C7C7327E385F300AAC862 /* PriceWatcher_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSUITests.swift; sourceTree = "<group>"; };
+		CF5C7C7527E385F300AAC862 /* PriceWatcher_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF5C7C4C27E385F200AAC862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6227E385F300AAC862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6C27E385F300AAC862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF5C7C4627E385F200AAC862 = {
+			isa = PBXGroup;
+			children = (
+				CF5C7C5127E385F200AAC862 /* PriceWatcher iOS */,
+				CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */,
+				CF5C7C7227E385F300AAC862 /* PriceWatcher iOSUITests */,
+				CF5C7C5027E385F200AAC862 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF5C7C5027E385F200AAC862 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */,
+				CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */,
+				CF5C7C6F27E385F300AAC862 /* PriceWatcher iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF5C7C5127E385F200AAC862 /* PriceWatcher iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C7C5227E385F200AAC862 /* AppDelegate.swift */,
+				CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */,
+				CF5C7C5627E385F200AAC862 /* ViewController.swift */,
+				CF5C7C5827E385F200AAC862 /* Main.storyboard */,
+				CF5C7C5B27E385F300AAC862 /* Assets.xcassets */,
+				CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */,
+				CF5C7C6027E385F300AAC862 /* Info.plist */,
+			);
+			path = "PriceWatcher iOS";
+			sourceTree = "<group>";
+		};
+		CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */,
+			);
+			path = "PriceWatcher iOSTests";
+			sourceTree = "<group>";
+		};
+		CF5C7C7227E385F300AAC862 /* PriceWatcher iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C7C7327E385F300AAC862 /* PriceWatcher_iOSUITests.swift */,
+				CF5C7C7527E385F300AAC862 /* PriceWatcher_iOSUITestsLaunchTests.swift */,
+			);
+			path = "PriceWatcher iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOS" */;
+			buildPhases = (
+				CF5C7C4B27E385F200AAC862 /* Sources */,
+				CF5C7C4C27E385F200AAC862 /* Frameworks */,
+				CF5C7C4D27E385F200AAC862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PriceWatcher iOS";
+			productName = "PriceWatcher iOS";
+			productReference = CF5C7C4F27E385F200AAC862 /* PriceWatcher iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF5C7C6427E385F300AAC862 /* PriceWatcher iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSTests" */;
+			buildPhases = (
+				CF5C7C6127E385F300AAC862 /* Sources */,
+				CF5C7C6227E385F300AAC862 /* Frameworks */,
+				CF5C7C6327E385F300AAC862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF5C7C6727E385F300AAC862 /* PBXTargetDependency */,
+			);
+			name = "PriceWatcher iOSTests";
+			productName = "PriceWatcher iOSTests";
+			productReference = CF5C7C6527E385F300AAC862 /* PriceWatcher iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF5C7C6E27E385F300AAC862 /* PriceWatcher iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5C7C7F27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSUITests" */;
+			buildPhases = (
+				CF5C7C6B27E385F300AAC862 /* Sources */,
+				CF5C7C6C27E385F300AAC862 /* Frameworks */,
+				CF5C7C6D27E385F300AAC862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF5C7C7127E385F300AAC862 /* PBXTargetDependency */,
+			);
+			name = "PriceWatcher iOSUITests";
+			productName = "PriceWatcher iOSUITests";
+			productReference = CF5C7C6F27E385F300AAC862 /* PriceWatcher iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF5C7C4727E385F200AAC862 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CF5C7C4E27E385F200AAC862 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CF5C7C6427E385F300AAC862 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CF5C7C4E27E385F200AAC862;
+					};
+					CF5C7C6E27E385F300AAC862 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CF5C7C4E27E385F200AAC862;
+					};
+				};
+			};
+			buildConfigurationList = CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF5C7C4627E385F200AAC862;
+			productRefGroup = CF5C7C5027E385F200AAC862 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */,
+				CF5C7C6427E385F300AAC862 /* PriceWatcher iOSTests */,
+				CF5C7C6E27E385F300AAC862 /* PriceWatcher iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF5C7C4D27E385F200AAC862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */,
+				CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */,
+				CF5C7C5A27E385F200AAC862 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6327E385F300AAC862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6D27E385F300AAC862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF5C7C4B27E385F200AAC862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5C7C5727E385F200AAC862 /* ViewController.swift in Sources */,
+				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
+				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6127E385F300AAC862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5C7C6A27E385F300AAC862 /* PriceWatcher_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5C7C6B27E385F300AAC862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5C7C7427E385F300AAC862 /* PriceWatcher_iOSUITests.swift in Sources */,
+				CF5C7C7627E385F300AAC862 /* PriceWatcher_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF5C7C6727E385F300AAC862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */;
+			targetProxy = CF5C7C6627E385F300AAC862 /* PBXContainerItemProxy */;
+		};
+		CF5C7C7127E385F300AAC862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5C7C4E27E385F200AAC862 /* PriceWatcher iOS */;
+			targetProxy = CF5C7C7027E385F300AAC862 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF5C7C5827E385F200AAC862 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF5C7C5927E385F200AAC862 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF5C7C5E27E385F300AAC862 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF5C7C7727E385F300AAC862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF5C7C7827E385F300AAC862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF5C7C7A27E385F300AAC862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PriceWatcher iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF5C7C7B27E385F300AAC862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PriceWatcher iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF5C7C7D27E385F300AAC862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher iOS.app/PriceWatcher iOS";
+			};
+			name = Debug;
+		};
+		CF5C7C7E27E385F300AAC862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriceWatcher iOS.app/PriceWatcher iOS";
+			};
+			name = Release;
+		};
+		CF5C7C8027E385F300AAC862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PriceWatcher iOS";
+			};
+			name = Debug;
+		};
+		CF5C7C8127E385F300AAC862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5A74ZSDFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fahim.PriceWatcher-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PriceWatcher iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF5C7C4A27E385F200AAC862 /* Build configuration list for PBXProject "PriceWatcher iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5C7C7727E385F300AAC862 /* Debug */,
+				CF5C7C7827E385F300AAC862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5C7C7927E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5C7C7A27E385F300AAC862 /* Debug */,
+				CF5C7C7B27E385F300AAC862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5C7C7C27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5C7C7D27E385F300AAC862 /* Debug */,
+				CF5C7C7E27E385F300AAC862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5C7C7F27E385F300AAC862 /* Build configuration list for PBXNativeTarget "PriceWatcher iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5C7C8027E385F300AAC862 /* Debug */,
+				CF5C7C8127E385F300AAC862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF5C7C4727E385F200AAC862 /* Project object */;
+}
