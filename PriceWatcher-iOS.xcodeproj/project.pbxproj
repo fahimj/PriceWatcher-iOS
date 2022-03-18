@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5227E385F200AAC862 /* AppDelegate.swift */; };
 		CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */; };
-		CF5C7C5727E385F200AAC862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5627E385F200AAC862 /* ViewController.swift */; };
-		CF5C7C5A27E385F200AAC862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5827E385F200AAC862 /* Main.storyboard */; };
 		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
 		CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */; };
 		CF5C7C6A27E385F300AAC862 /* PriceWatcher_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */; };
+		CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2031E27E40345004B69B3 /* MainViewController.swift */; };
+		CFD2032127E40345004B69B3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2031F27E40345004B69B3 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +30,13 @@
 		CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF5C7C5627E385F200AAC862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF5C7C5927E385F200AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF5C7C5B27E385F300AAC862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF5C7C5E27E385F300AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF5C7C6027E385F300AAC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSTests.swift; sourceTree = "<group>"; };
+		CFD2031E27E40345004B69B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CFD2031F27E40345004B69B3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			children = (
 				CF5C7C5227E385F200AAC862 /* AppDelegate.swift */,
 				CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */,
-				CF5C7C5627E385F200AAC862 /* ViewController.swift */,
-				CF5C7C5827E385F200AAC862 /* Main.storyboard */,
+				CFD2031E27E40345004B69B3 /* MainViewController.swift */,
+				CFD2031F27E40345004B69B3 /* MainViewController.xib */,
 				CF5C7C5B27E385F300AAC862 /* Assets.xcassets */,
 				CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */,
 				CF5C7C6027E385F300AAC862 /* Info.plist */,
@@ -180,7 +180,7 @@
 			files = (
 				CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */,
 				CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */,
-				CF5C7C5A27E385F200AAC862 /* Main.storyboard in Resources */,
+				CFD2032127E40345004B69B3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,9 +198,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5C7C5727E385F200AAC862 /* ViewController.swift in Sources */,
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
 				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
+				CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +223,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF5C7C5827E385F200AAC862 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF5C7C5927E385F200AAC862 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,10 +359,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C5A74ZSDFY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PriceWatcher iOS/Info.plist";
+				INFOPLIST_FILE = "PriceWatcher-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,7 +390,7 @@
 				INFOPLIST_FILE = "PriceWatcher iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
