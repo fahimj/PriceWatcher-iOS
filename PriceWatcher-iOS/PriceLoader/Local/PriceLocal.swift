@@ -26,12 +26,12 @@ struct LocalLocation : Codable {
     }
 }
 
-struct LocalUserActivity : Codable {
+struct LocalDataRequestActivity : Codable {
     let prices:[LocalPrice]
     let location:LocalLocation
     let date: Date
     
-    var userActivity:UserActivity {
-        UserActivity(prices: prices.map{$0.price}, location: self.location.location, date: date)
+    var userActivity:PriceDataRequestActivity {
+        PriceDataRequestActivity(prices: prices.map{$0.price}, location: self.location.location, date: date)
     }
 }

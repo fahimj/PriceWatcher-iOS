@@ -18,7 +18,7 @@ struct Location {
     let longitude:Double
 }
 
-struct UserActivity {
+struct PriceDataRequestActivity {
     let prices:[Price]
     let location:Location
     let date: Date

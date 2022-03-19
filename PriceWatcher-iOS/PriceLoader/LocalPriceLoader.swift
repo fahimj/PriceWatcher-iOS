@@ -27,7 +27,7 @@ class LocalPriceLoader {
         }
         
         let localLocation = LocalLocation(latitude: latitude, longitude: longitude)
-        let localUserActivity = LocalUserActivity(prices: localPrices, location: localLocation, date: Date())
+        let localUserActivity = LocalDataRequestActivity(prices: localPrices, location: localLocation, date: Date())
         
         let encodedData = try JSONEncoder().encode(localUserActivity)
         let userDefaults = UserDefaults.standard
@@ -38,7 +38,7 @@ class LocalPriceLoader {
         let userDefaults = UserDefaults.standard
         guard let dataJson = userDefaults.data(forKey: "SavedItem") else {return []}
         
-        let localUserActivity = try JSONDecoder().decode(LocalUserActivity.self, from: dataJson)
+        let localUserActivity = try JSONDecoder().decode(LocalDataRequestActivity.self, from: dataJson)
         let prices = localUserActivity.prices.map{item in
             Price(pairName: item.pairName, price: item.value, date: item.date)
         }

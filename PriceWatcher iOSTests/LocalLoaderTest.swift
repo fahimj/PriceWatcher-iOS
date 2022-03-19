@@ -62,13 +62,13 @@ class LocalLoaderTest: XCTestCase {
         return location
     }
     
-    private func anyUserActivity() -> UserActivity {
+    private func anyUserActivity() -> PriceDataRequestActivity {
         let price1 = anyPrice()
         let price2 = anyPrice()
         let price3 = anyPrice()
         let location = anyLocation()
         
-        let userActivity = UserActivity(prices: [price1, price2, price3], location: location, date: Date())
+        let userActivity = PriceDataRequestActivity(prices: [price1, price2, price3], location: location, date: Date())
         return userActivity
     }
 }
