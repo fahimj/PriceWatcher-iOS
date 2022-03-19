@@ -33,15 +33,15 @@ class DataRequestActivityTest: XCTestCase {
         
         try await sut.loadAndCache()
         
-        let prices = try await sut.load()
-        XCTAssert(prices.count == 3)
+        let dataRequests = try await sut.load()
+        XCTAssert(dataRequests.first!.prices.count == 3)
     }
     
     // MARK: Helpers
     
     func makeSut() -> DataRequestActivityManager {
         
-        let cache = LocalPriceLoader()
+        let cache = LocalPriceDataRequestActivityLoader()
         let httpClient = makeHttpClient()
         let loader = RemotePriceLoader(httpClient: httpClient)
         let sut = DataRequestActivityManager(loader: loader, cache: cache, locationManager: MockLocationManager())

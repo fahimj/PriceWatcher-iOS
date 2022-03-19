@@ -9,7 +9,7 @@ import Foundation
 
 struct Price {
     let pairName: String
-    let price: Double
+    let value: Double
     let date: Date
 }
 

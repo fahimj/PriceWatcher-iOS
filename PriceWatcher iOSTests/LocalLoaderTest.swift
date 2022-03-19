@@ -24,50 +24,50 @@ class LocalLoaderTest: XCTestCase {
     }
     
     func test_load_returnsEmptyObject() async {
-        let sut = LocalPriceLoader()
-        let result = try! await sut.load()
+        let sut = LocalPriceDataRequestActivityLoader()
+        let result = try! await sut.loadCache()
         XCTAssert(result.count == 0)
     }
     
     func test_save_load_returnSameObject() async {
         let anyUserActivity = anyUserActivity()
-        let sut = LocalPriceLoader()
+        let sut = LocalPriceDataRequestActivityLoader()
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
-        let savedItems = try! await sut.load()
+        let savedItems = try! await sut.loadCache()
         
-        XCTAssertEqual(savedItems, anyUserActivity.prices)
+        XCTAssertEqual(savedItems.first!.prices, anyUserActivity.prices)
     }
     
     func test_save_twiceReturn2Objects() async {
         let anyUserActivity = anyUserActivity()
-        let sut = LocalPriceLoader()
+        let sut = LocalPriceDataRequestActivityLoader()
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
-        let savedItems = try! await sut.load()
+        let savedItems = try! await sut.loadCache()
         
         var doubleData = anyUserActivity.prices
         doubleData.append(contentsOf: anyUserActivity.prices)
         
-        XCTAssertEqual(savedItems, doubleData)
+        XCTAssertEqual(savedItems.flatMap{$0.prices}, doubleData)
     }
     
     func test_delete_returnsNoError() async {
-        let sut = LocalPriceLoader()
+        let sut = LocalPriceDataRequestActivityLoader()
         sut.delete()
     }
     
     func test_save_delete_returnsNoData() async throws {
-        let sut = LocalPriceLoader()
+        let sut = LocalPriceDataRequestActivityLoader()
         let anyUserActivity = anyUserActivity()
         try await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         sut.delete()
-        let prices = try await sut.load()
-        XCTAssert(prices == [])
+        let prices = try await sut.loadCache()
+        XCTAssert(prices.isEmpty)
     }
     
     // MARK: Helpers
     private func anyPrice() -> Price {
-        let price = Price(pairName: "BTCUSD", price: 55000, date: Date())
+        let price = Price(pairName: "BTCUSD", value: 55000, date: Date())
         return price
     }
     
@@ -91,6 +91,6 @@ extension Price : Equatable {
     public static func == (lhs: Price, rhs: Price) -> Bool {
         return lhs.pairName == rhs.pairName &&
         lhs.date == rhs.date &&
-        lhs.price == rhs.price
+        lhs.value == rhs.value
     }
 }

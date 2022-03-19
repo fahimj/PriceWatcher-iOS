@@ -10,10 +10,10 @@ import Foundation
 class DataRequestActivityManager {
     //read data response, save to local,
     let loader:PriceLoader
-    let cache:PriceCache
+    let cache:PriceDataRequestActivityCache
     let locationManager:LocationManager
     
-    init(loader:PriceLoader, cache:PriceCache, locationManager: LocationManager) {
+    init(loader:PriceLoader, cache:PriceDataRequestActivityCache, locationManager: LocationManager) {
         self.loader = loader
         self.cache = cache
         self.locationManager = locationManager
@@ -27,7 +27,7 @@ class DataRequestActivityManager {
         
     }
     
-    func load() async throws -> [Price] {
-        return try await cache.load()
+    func load() async throws -> [PriceDataRequestActivity] {
+        return try await cache.loadCache()
     }
 }

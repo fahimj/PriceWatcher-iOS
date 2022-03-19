@@ -13,7 +13,7 @@ struct LocalPrice : Codable {
     let date: Date
     
     var price:Price {
-        Price(pairName: pairName, price: value, date: date)
+        Price(pairName: pairName, value: value, date: date)
     }
 }
 

@@ -22,7 +22,7 @@ struct CoinbaseJsonDtoMapper {
         
         let dtos = [bpis.eur!, bpis.gbp!, bpis.usd!]
         let items = dtos.map{bpi in
-            Price(pairName: "BTC" + bpi.code!, price: bpi.rateFloat!, date: json.time!.updatedDate!)
+            Price(pairName: "BTC" + bpi.code!, value: bpi.rateFloat!, date: json.time!.updatedDate!)
         }
         return items
     }
