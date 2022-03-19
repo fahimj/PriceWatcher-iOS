@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 class MainViewController: UITableViewController {
     init() {
@@ -15,82 +16,108 @@ class MainViewController: UITableViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    lazy var lineChartView:LineChartView = {
+        LineChartView()
+    }()
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
+        
+        setupChart()
+        
+        var lineChartEntry = [ChartDataEntry]()
+        lineChartEntry.append(ChartDataEntry(x: 0.0, y: 0.0))
+        lineChartEntry.append(ChartDataEntry(x: 1.0, y: 1.0))
+        lineChartEntry.append(ChartDataEntry(x: 3.0, y: 2.0))
+        lineChartEntry.append(ChartDataEntry(x: 4.0, y: 1.0))
+        lineChartEntry.append(ChartDataEntry(x: 5.0, y: 1.0))
+        lineChartEntry.append(ChartDataEntry(x: 6.0, y: 1.0))
+        lineChartEntry.append(ChartDataEntry(x: 7.0, y: 1.0))
+        
+        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number")
+        line1.lineWidth = 1.75
+        line1.circleRadius = 5.0
+        line1.circleHoleRadius = 2.5
+        line1.setColor(.black)
+        line1.setCircleColor(.black)
+        line1.highlightColor = .black
+        line1.drawValuesEnabled = false
+        
+        let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
+                              ChartColorTemplates.colorFromString("#ffff0000").cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        line1.fillAlpha = 1
+        line1.fill = LinearGradientFill(gradient: gradient, angle: 90)
+        line1.drawFilledEnabled = true
+        
+        let data = LineChartData(dataSet: line1)
+        lineChartView.data = data
+        
+        lineChartView.dragEnabled = true
+        lineChartView.setScaleEnabled(true)
+        lineChartView.pinchZoomEnabled = true
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    private func setupChart() {
+//        lineChartView.backgroundColor = UIColor.red
+        lineChartView.chartDescription.enabled = false
+//        lineChartView.dragEnabled = true
+//        lineChartView.setScaleEnabled(true)
+//        lineChartView.pinchZoomEnabled = false
+//        lineChartView.setViewPortOffsets(left: 10, top: 0, right: 10, bottom: 0)
+        
+        lineChartView.legend.enabled = false
+        
+        lineChartView.leftAxis.enabled = false
+//        lineChartView.leftAxis.spaceTop = 0.4
+//        lineChartView.leftAxis.spaceBottom = 0.4
+        lineChartView.rightAxis.enabled = false
+//        lineChartView.axis
+//        lineChartView.xAxis.enabled = false
+        lineChartView.animate(xAxisDuration: 0.5)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section == 0 else { return nil }
+        return lineChartView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 300
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard section == 0 else { return nil }
+        return UIButton()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        var cell : UITableViewCell!
+        cell = tableView.dequeueReusableCell(withIdentifier: "TEST")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "TEST")
+        }
+        
+        cell.textLabel?.text = "TEST"
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }
