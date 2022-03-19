@@ -1,0 +1,32 @@
+{
+    "time": {
+        "updated": "Mar 19, 2022 03:26:00 UTC",
+        "updatedISO": "2022-03-19T03:26:00+00:00",
+        "updateduk": "Mar 19, 2022 at 03:26 GMT"
+    },
+    "disclaimer": "This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",
+    "chartName": "Bitcoin",
+    "bpi": {
+        "USD": {
+            "code": "USD",
+            "symbol": "&#36;",
+            "rate": "41,714.2767",
+            "description": "United States Dollar",
+            "rate_float": 41714.2767
+        },
+        "GBP": {
+            "code": "GBP",
+            "symbol": "&pound;",
+            "rate": "31,647.2869",
+            "description": "British Pound Sterling",
+            "rate_float": 31647.2869
+        },
+        "EUR": {
+            "code": "EUR",
+            "symbol": "&euro;",
+            "rate": "37,698.6101",
+            "description": "Euro",
+            "rate_float": 37698.6101
+        }
+    }
+}

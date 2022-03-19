@@ -56,7 +56,7 @@ class MainViewController: UITableViewController {
         
         let data = LineChartData(dataSet: line1)
         lineChartView.data = data
-        
+        lineChartView.xAxis.labelPosition = .bottom
         lineChartView.dragEnabled = true
         lineChartView.setScaleEnabled(true)
         lineChartView.pinchZoomEnabled = true

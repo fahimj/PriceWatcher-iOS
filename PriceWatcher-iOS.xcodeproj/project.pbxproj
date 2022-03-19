@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1ACD0B27E584F2004270F9 /* currentprice.json in Resources */ = {isa = PBXBuildFile; fileRef = CF1ACD0A27E584F2004270F9 /* currentprice.json */; };
+		CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD0C27E5853A004270F9 /* Price.swift */; };
+		CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD0F27E58661004270F9 /* BPICodable.swift */; };
+		CF1ACD1227E587F9004270F9 /* JsonDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */; };
+		CF1ACD1427E592B2004270F9 /* CodableBpiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */; };
+		CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1527E59352004270F9 /* CodableTime.swift */; };
+		CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1727E59379004270F9 /* CodableCurrency.swift */; };
 		CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5227E385F200AAC862 /* AppDelegate.swift */; };
 		CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */; };
 		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
 		CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */; };
-		CF5C7C6A27E385F300AAC862 /* PriceWatcher_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */; };
+		CF5C7C6A27E385F300AAC862 /* JsonDtoMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */; };
 		CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2031E27E40345004B69B3 /* MainViewController.swift */; };
 		CFD2032127E40345004B69B3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2031F27E40345004B69B3 /* MainViewController.xib */; };
 		CFDB472127E46CD40042F7BC /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = CFDB472027E46CD40042F7BC /* Charts */; };
@@ -28,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF1ACD0A27E584F2004270F9 /* currentprice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice.json; sourceTree = "<group>"; };
+		CF1ACD0C27E5853A004270F9 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		CF1ACD0F27E58661004270F9 /* BPICodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPICodable.swift; sourceTree = "<group>"; };
+		CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDtoMapper.swift; sourceTree = "<group>"; };
+		CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBpiRoot.swift; sourceTree = "<group>"; };
+		CF1ACD1527E59352004270F9 /* CodableTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTime.swift; sourceTree = "<group>"; };
+		CF1ACD1727E59379004270F9 /* CodableCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableCurrency.swift; sourceTree = "<group>"; };
 		CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +49,7 @@
 		CF5C7C5E27E385F300AAC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF5C7C6027E385F300AAC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceWatcher_iOSTests.swift; sourceTree = "<group>"; };
+		CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDtoMapperTest.swift; sourceTree = "<group>"; };
 		CFD2031E27E40345004B69B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CFD2031F27E40345004B69B3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +73,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1ACD0927E580C9004270F9 /* PriceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
+				CF1ACD0C27E5853A004270F9 /* Price.swift */,
+				CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */,
+			);
+			path = PriceLoader;
+			sourceTree = "<group>";
+		};
+		CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */ = {
+			isa = PBXGroup;
+			children = (
+				CF1ACD0F27E58661004270F9 /* BPICodable.swift */,
+				CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */,
+				CF1ACD1527E59352004270F9 /* CodableTime.swift */,
+				CF1ACD1727E59379004270F9 /* CodableCurrency.swift */,
+			);
+			path = CoinbaseCodable;
+			sourceTree = "<group>";
+		};
 		CF5C7C4627E385F200AAC862 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +115,7 @@
 		CF5C7C5127E385F200AAC862 /* PriceWatcher-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CF1ACD0927E580C9004270F9 /* PriceLoader */,
 				CF5C7C5227E385F200AAC862 /* AppDelegate.swift */,
 				CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */,
 				CFD2031E27E40345004B69B3 /* MainViewController.swift */,
@@ -94,7 +130,8 @@
 		CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF5C7C6927E385F300AAC862 /* PriceWatcher_iOSTests.swift */,
+				CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */,
+				CF1ACD0A27E584F2004270F9 /* currentprice.json */,
 			);
 			path = "PriceWatcher iOSTests";
 			sourceTree = "<group>";
@@ -196,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1ACD0B27E584F2004270F9 /* currentprice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +245,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
+				CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */,
+				CF1ACD1227E587F9004270F9 /* JsonDtoMapper.swift in Sources */,
 				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
+				CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */,
+				CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */,
+				CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */,
 				CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */,
+				CF1ACD1427E592B2004270F9 /* CodableBpiRoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5C7C6A27E385F300AAC862 /* PriceWatcher_iOSTests.swift in Sources */,
+				CF5C7C6A27E385F300AAC862 /* JsonDtoMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
