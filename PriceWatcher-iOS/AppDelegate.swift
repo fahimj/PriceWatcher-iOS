@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import BackgroundTasks
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +16,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        handleBackgroundTask()
         return true
     }
+    
+    func handleBackgroundTask() {
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.fahim.PriceWatcher-iOS.fetchAndCache", using: nil) { task in
+            let locationManager = CLLocationManager()
+            locationManager.requestAlwaysAuthorization()
+            let urlSessionHttpClient = UrlSessionHttpClient(session: URLSession.shared)
+            let remotePriceLoader = RemotePriceLoader(httpClient: urlSessionHttpClient)
+            let dataRequestActivityManager = DataRequestActivityManager(loader: remotePriceLoader, cache: LocalPriceDataRequestActivityCache(), locationManager: locationManager)
+            Task {
+                do {
+                    try await dataRequestActivityManager.loadRemotelyAndCache()
+                    task.setTaskCompleted(success: true)
+                }
+                catch {
+                    task.setTaskCompleted(success: false)
+                }
+                
+            }
+            
+        }
+        
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.fahim.PriceWatcher-iOS.removeCache", using: nil) { task in
+            Task {
+                LocalPriceDataRequestActivityCache().delete()
+                task.setTaskCompleted(success: true)
+            }
+            
+        }
+        
+        scheduleAppRefresh()
+    }
+    
+    func scheduleAppRefresh() {
+        let request = BGAppRefreshTaskRequest(identifier: "com.fahim.PriceWatcher-iOS.fetchAndCache")
+        // Fetch no earlier than 60 minutes from now.
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60)
+        
+        let deleteTaskRequest = BGAppRefreshTaskRequest(identifier: "com.fahim.PriceWatcher-iOS.removeCache")
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60 * 24)
+        
+        do {
+            try BGTaskScheduler.shared.submit(request)
+            try BGTaskScheduler.shared.submit(deleteTaskRequest)
+        } catch {
+            print("Could not schedule app refresh: \(error)")
+        }
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 

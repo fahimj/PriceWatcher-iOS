@@ -517,6 +517,8 @@
 				DEVELOPMENT_TEAM = C5A74ZSDFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PriceWatcher-iOS/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app needs to track your location when gathering the price data";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs to track your location when gathering the price data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -554,6 +556,8 @@
 				DEVELOPMENT_TEAM = C5A74ZSDFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PriceWatcher iOS/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app needs to track your location when gathering the price data";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs to track your location when gathering the price data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
