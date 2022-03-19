@@ -23,15 +23,10 @@ protocol LocationManager {
     
     // Wrappers for CLLocationManager class functions.
     var authorizationStatus: CLAuthorizationStatus { get }
-//    func getAuthorizationStatus() -> CLAuthorizationStatus
     func isLocationServicesEnabled() -> Bool
 }
 
 extension CLLocationManager: LocationManager {
-//    func getAuthorizationStatus() -> CLAuthorizationStatus {
-//        return CLLocationManager.authorizationStatus()
-//    }
-
     func isLocationServicesEnabled() -> Bool {
         return CLLocationManager.locationServicesEnabled()
     }
