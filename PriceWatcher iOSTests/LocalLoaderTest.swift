@@ -32,10 +32,23 @@ class LocalLoaderTest: XCTestCase {
     func test_save_load_returnSameObject() async {
         let anyUserActivity = anyUserActivity()
         let sut = LocalPriceLoader()
-        try! sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
+        try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         let savedItems = try! await sut.load()
         
         XCTAssertEqual(savedItems, anyUserActivity.prices)
+    }
+    
+    func test_save_twiceReturn2Objects() async {
+        let anyUserActivity = anyUserActivity()
+        let sut = LocalPriceLoader()
+        try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
+        try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
+        let savedItems = try! await sut.load()
+        
+        var doubleData = anyUserActivity.prices
+        doubleData.append(contentsOf: anyUserActivity.prices)
+        
+        XCTAssertEqual(savedItems, doubleData)
     }
     
     // MARK: Helpers
@@ -58,7 +71,6 @@ class LocalLoaderTest: XCTestCase {
         let userActivity = UserActivity(prices: [price1, price2, price3], location: location, date: Date())
         return userActivity
     }
-    
 }
 
 extension Price : Equatable {
