@@ -12,11 +12,17 @@ protocol PriceLoader {
 }
 
 protocol PriceCache {
-    func save(price:[Price], longitude:Double, latitude:Double)
+    func load() async throws -> [Price]
+    func save(price:[Price], longitude:Double, latitude:Double) async throws
     func delete()
 }
 
-class LocalPriceLoader {
+class LocalPriceLoader : PriceCache {
+    func delete() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(nil, forKey: "SavedItem")
+        userDefaults.synchronize()
+    }
     
     func save(price:[Price], longitude:Double, latitude:Double) async throws {
         var existingPricesData = try! await self.load()

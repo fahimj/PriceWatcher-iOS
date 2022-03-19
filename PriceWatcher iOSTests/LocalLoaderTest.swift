@@ -51,6 +51,20 @@ class LocalLoaderTest: XCTestCase {
         XCTAssertEqual(savedItems, doubleData)
     }
     
+    func test_delete_returnsNoError() async {
+        let sut = LocalPriceLoader()
+        sut.delete()
+    }
+    
+    func test_save_delete_returnsNoData() async throws {
+        let sut = LocalPriceLoader()
+        let anyUserActivity = anyUserActivity()
+        try await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
+        sut.delete()
+        let prices = try await sut.load()
+        XCTAssert(prices == [])
+    }
+    
     // MARK: Helpers
     private func anyPrice() -> Price {
         let price = Price(pairName: "BTCUSD", price: 55000, date: Date())

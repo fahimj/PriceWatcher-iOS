@@ -27,6 +27,10 @@
 		CFA3A99027E5E19100D00EEB /* LocalPriceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98F27E5E19100D00EEB /* LocalPriceLoader.swift */; };
 		CFA3A99227E5E8EC00D00EEB /* LocalLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */; };
 		CFA3A99527E5F87200D00EEB /* PriceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99427E5F87100D00EEB /* PriceLocal.swift */; };
+		CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99627E6059000D00EEB /* LocationProvider.swift */; };
+		CFA3A99B27E6063700D00EEB /* CLLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */; };
+		CFA3A99D27E6127800D00EEB /* DataRequestActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */; };
+		CFA3A99F27E612A600D00EEB /* DataRequestActivityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */; };
 		CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2031E27E40345004B69B3 /* MainViewController.swift */; };
 		CFD2032127E40345004B69B3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2031F27E40345004B69B3 /* MainViewController.xib */; };
 		CFDB472127E46CD40042F7BC /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = CFDB472027E46CD40042F7BC /* Charts */; };
@@ -66,6 +70,10 @@
 		CFA3A98F27E5E19100D00EEB /* LocalPriceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPriceLoader.swift; sourceTree = "<group>"; };
 		CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoaderTest.swift; sourceTree = "<group>"; };
 		CFA3A99427E5F87100D00EEB /* PriceLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLocal.swift; sourceTree = "<group>"; };
+		CFA3A99627E6059000D00EEB /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationMock.swift; sourceTree = "<group>"; };
+		CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestActivityManager.swift; sourceTree = "<group>"; };
+		CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestActivityTest.swift; sourceTree = "<group>"; };
 		CFD2031E27E40345004B69B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CFD2031F27E40345004B69B3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +106,8 @@
 				CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */,
 				CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */,
 				CFA3A98F27E5E19100D00EEB /* LocalPriceLoader.swift */,
+				CFA3A99627E6059000D00EEB /* LocationProvider.swift */,
+				CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */,
 			);
 			path = PriceLoader;
 			sourceTree = "<group>";
@@ -154,6 +164,7 @@
 				CFA3A98627E5D42C00D00EEB /* HttpClientTest.swift */,
 				CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */,
 				CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */,
+				CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */,
 			);
 			path = "PriceWatcher iOSTests";
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 				CF1ACD0A27E584F2004270F9 /* currentprice.json */,
 				CFA3A98927E5D4EE00D00EEB /* URLProtocolStub.swift */,
 				CFA3A98B27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift */,
+				CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -292,11 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */,
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
 				CFA3A99527E5F87200D00EEB /* PriceLocal.swift in Sources */,
 				CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */,
 				CF1ACD1227E587F9004270F9 /* CoinbaseJsonDtoMapper.swift in Sources */,
+				CFA3A99B27E6063700D00EEB /* CLLocationMock.swift in Sources */,
 				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
+				CFA3A99D27E6127800D00EEB /* DataRequestActivityManager.swift in Sources */,
 				CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */,
 				CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */,
 				CFA3A98527E5CFBD00D00EEB /* RemotePriceLoader.swift in Sources */,
@@ -311,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA3A99F27E612A600D00EEB /* DataRequestActivityTest.swift in Sources */,
 				CFA3A99227E5E8EC00D00EEB /* LocalLoaderTest.swift in Sources */,
 				CFA3A98727E5D42C00D00EEB /* HttpClientTest.swift in Sources */,
 				CFA3A98C27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift in Sources */,
