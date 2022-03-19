@@ -24,14 +24,14 @@ class LocalLoaderTest: XCTestCase {
     }
     
     func test_load_returnsEmptyObject() async {
-        let sut = LocalPriceDataRequestActivityLoader()
+        let sut = LocalPriceDataRequestActivityCache()
         let result = try! await sut.loadCache()
         XCTAssert(result.count == 0)
     }
     
     func test_save_load_returnSameObject() async {
         let anyUserActivity = anyUserActivity()
-        let sut = LocalPriceDataRequestActivityLoader()
+        let sut = LocalPriceDataRequestActivityCache()
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         let savedItems = try! await sut.loadCache()
         
@@ -40,7 +40,7 @@ class LocalLoaderTest: XCTestCase {
     
     func test_save_twiceReturn2Objects() async {
         let anyUserActivity = anyUserActivity()
-        let sut = LocalPriceDataRequestActivityLoader()
+        let sut = LocalPriceDataRequestActivityCache()
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         try! await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         let savedItems = try! await sut.loadCache()
@@ -52,12 +52,12 @@ class LocalLoaderTest: XCTestCase {
     }
     
     func test_delete_returnsNoError() async {
-        let sut = LocalPriceDataRequestActivityLoader()
+        let sut = LocalPriceDataRequestActivityCache()
         sut.delete()
     }
     
     func test_save_delete_returnsNoData() async throws {
-        let sut = LocalPriceDataRequestActivityLoader()
+        let sut = LocalPriceDataRequestActivityCache()
         let anyUserActivity = anyUserActivity()
         try await sut.save(price: anyUserActivity.prices, longitude: anyUserActivity.location.longitude, latitude: anyUserActivity.location.latitude)
         sut.delete()

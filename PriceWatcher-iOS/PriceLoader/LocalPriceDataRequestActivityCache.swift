@@ -17,7 +17,7 @@ protocol PriceDataRequestActivityCache {
     func delete()
 }
 
-class LocalPriceDataRequestActivityLoader : PriceDataRequestActivityCache {
+class LocalPriceDataRequestActivityCache : PriceDataRequestActivityCache {
     func delete() {
         let userDefaults = UserDefaults.standard
         userDefaults.set(nil, forKey: "SavedItem")

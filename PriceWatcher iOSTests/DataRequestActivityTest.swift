@@ -41,7 +41,7 @@ class DataRequestActivityTest: XCTestCase {
     
     func makeSut() -> DataRequestActivityManager {
         
-        let cache = LocalPriceDataRequestActivityLoader()
+        let cache = LocalPriceDataRequestActivityCache()
         let httpClient = makeHttpClient()
         let loader = RemotePriceLoader(httpClient: httpClient)
         let sut = DataRequestActivityManager(loader: loader, cache: cache, locationManager: MockLocationManager())
