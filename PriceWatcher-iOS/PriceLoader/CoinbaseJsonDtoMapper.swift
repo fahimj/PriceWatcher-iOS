@@ -12,6 +12,8 @@ struct CoinbaseJsonDtoMapper {
         case invalidJson
     }
     
+    private init() {}
+    
     static func mapToPrice(jsonData:Data) throws -> [Price] {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

@@ -19,6 +19,11 @@
 		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
 		CF5C7C5F27E385F300AAC862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5D27E385F300AAC862 /* LaunchScreen.storyboard */; };
 		CF5C7C6A27E385F300AAC862 /* JsonDtoMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */; };
+		CFA3A98527E5CFBD00D00EEB /* RemotePriceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */; };
+		CFA3A98727E5D42C00D00EEB /* HttpClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98627E5D42C00D00EEB /* HttpClientTest.swift */; };
+		CFA3A98A27E5D4EE00D00EEB /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98927E5D4EE00D00EEB /* URLProtocolStub.swift */; };
+		CFA3A98C27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98B27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift */; };
+		CFA3A98E27E5DDE300D00EEB /* RemoteLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */; };
 		CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2031E27E40345004B69B3 /* MainViewController.swift */; };
 		CFD2032127E40345004B69B3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2031F27E40345004B69B3 /* MainViewController.xib */; };
 		CFDB472127E46CD40042F7BC /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = CFDB472027E46CD40042F7BC /* Charts */; };
@@ -50,6 +55,11 @@
 		CF5C7C6027E385F300AAC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5C7C6527E385F300AAC862 /* PriceWatcher-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PriceWatcher-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDtoMapperTest.swift; sourceTree = "<group>"; };
+		CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePriceLoader.swift; sourceTree = "<group>"; };
+		CFA3A98627E5D42C00D00EEB /* HttpClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTest.swift; sourceTree = "<group>"; };
+		CFA3A98927E5D4EE00D00EEB /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		CFA3A98B27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoaderTest.swift; sourceTree = "<group>"; };
 		CFD2031E27E40345004B69B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CFD2031F27E40345004B69B3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +86,10 @@
 		CF1ACD0927E580C9004270F9 /* PriceLoader */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3A98327E5CF8500D00EEB /* Domain */,
 				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
-				CF1ACD0C27E5853A004270F9 /* Price.swift */,
 				CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */,
+				CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */,
 			);
 			path = PriceLoader;
 			sourceTree = "<group>";
@@ -130,10 +141,30 @@
 		CF5C7C6827E385F300AAC862 /* PriceWatcher iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3A98827E5D4D700D00EEB /* Helpers */,
 				CF5C7C6927E385F300AAC862 /* JsonDtoMapperTest.swift */,
-				CF1ACD0A27E584F2004270F9 /* currentprice.json */,
+				CFA3A98627E5D42C00D00EEB /* HttpClientTest.swift */,
+				CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */,
 			);
 			path = "PriceWatcher iOSTests";
+			sourceTree = "<group>";
+		};
+		CFA3A98327E5CF8500D00EEB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CF1ACD0C27E5853A004270F9 /* Price.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CFA3A98827E5D4D700D00EEB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1ACD0A27E584F2004270F9 /* currentprice.json */,
+				CFA3A98927E5D4EE00D00EEB /* URLProtocolStub.swift */,
+				CFA3A98B27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +281,7 @@
 				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
 				CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */,
 				CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */,
+				CFA3A98527E5CFBD00D00EEB /* RemotePriceLoader.swift in Sources */,
 				CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */,
 				CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */,
 				CF1ACD1427E592B2004270F9 /* CodableBpiRoot.swift in Sources */,
@@ -260,6 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA3A98727E5D42C00D00EEB /* HttpClientTest.swift in Sources */,
+				CFA3A98C27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift in Sources */,
+				CFA3A98A27E5D4EE00D00EEB /* URLProtocolStub.swift in Sources */,
+				CFA3A98E27E5DDE300D00EEB /* RemoteLoaderTest.swift in Sources */,
 				CF5C7C6A27E385F300AAC862 /* JsonDtoMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

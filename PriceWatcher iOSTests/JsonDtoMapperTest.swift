@@ -7,7 +7,7 @@
 import XCTest
 @testable import PriceWatcher_iOS
 
-class PriceWatcher_iOSTests: XCTestCase {
+class JsonDtoMapperTest: XCTestCase {
     typealias sut = CoinbaseJsonDtoMapper
     
     func test_mapToPrice_throwsErrorOnEmptyData() {
