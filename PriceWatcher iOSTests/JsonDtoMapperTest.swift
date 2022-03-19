@@ -8,8 +8,9 @@ import XCTest
 @testable import PriceWatcher_iOS
 
 class PriceWatcher_iOSTests: XCTestCase {
+    typealias sut = CoinbaseJsonDtoMapper
+    
     func test_mapToPrice_throwsErrorOnEmptyData() {
-        let sut = JsonDtoMapper()
         do {
             let _ = try sut.mapToPrice(jsonData: Data())
         } catch {
@@ -20,7 +21,6 @@ class PriceWatcher_iOSTests: XCTestCase {
     }
     
     func test_mapToPrice_throwsErrorOnInvalidData() {
-        let sut = JsonDtoMapper()
         do {
             let _ = try sut.mapToPrice(jsonData: "any data".data(using: .ascii)!)
         } catch is DecodingError {
@@ -35,7 +35,6 @@ class PriceWatcher_iOSTests: XCTestCase {
     
     func test_mapToPrice_returns3Items() {
         let data = getSampleJsonData()
-        let sut = JsonDtoMapper()
         do {
             let result = try sut.mapToPrice(jsonData: data)
             XCTAssertTrue(result.count == 3)

@@ -10,7 +10,7 @@
 		CF1ACD0B27E584F2004270F9 /* currentprice.json in Resources */ = {isa = PBXBuildFile; fileRef = CF1ACD0A27E584F2004270F9 /* currentprice.json */; };
 		CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD0C27E5853A004270F9 /* Price.swift */; };
 		CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD0F27E58661004270F9 /* BPICodable.swift */; };
-		CF1ACD1227E587F9004270F9 /* JsonDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */; };
+		CF1ACD1227E587F9004270F9 /* CoinbaseJsonDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */; };
 		CF1ACD1427E592B2004270F9 /* CodableBpiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */; };
 		CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1527E59352004270F9 /* CodableTime.swift */; };
 		CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1727E59379004270F9 /* CodableCurrency.swift */; };
@@ -38,7 +38,7 @@
 		CF1ACD0A27E584F2004270F9 /* currentprice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice.json; sourceTree = "<group>"; };
 		CF1ACD0C27E5853A004270F9 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		CF1ACD0F27E58661004270F9 /* BPICodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPICodable.swift; sourceTree = "<group>"; };
-		CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDtoMapper.swift; sourceTree = "<group>"; };
+		CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseJsonDtoMapper.swift; sourceTree = "<group>"; };
 		CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBpiRoot.swift; sourceTree = "<group>"; };
 		CF1ACD1527E59352004270F9 /* CodableTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTime.swift; sourceTree = "<group>"; };
 		CF1ACD1727E59379004270F9 /* CodableCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableCurrency.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			children = (
 				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
 				CF1ACD0C27E5853A004270F9 /* Price.swift */,
-				CF1ACD1127E587F9004270F9 /* JsonDtoMapper.swift */,
+				CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */,
 			);
 			path = PriceLoader;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			files = (
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
 				CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */,
-				CF1ACD1227E587F9004270F9 /* JsonDtoMapper.swift in Sources */,
+				CF1ACD1227E587F9004270F9 /* CoinbaseJsonDtoMapper.swift in Sources */,
 				CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */,
 				CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */,
 				CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */,

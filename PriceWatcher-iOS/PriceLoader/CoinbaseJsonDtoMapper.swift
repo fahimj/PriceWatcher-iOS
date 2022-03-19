@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct JsonDtoMapper {
+struct CoinbaseJsonDtoMapper {
     enum JsonMapperError: Error {
         case invalidJson
     }
     
-    func mapToPrice(jsonData:Data) throws -> [Price] {
+    static func mapToPrice(jsonData:Data) throws -> [Price] {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         let json = try decoder.decode(CodableBpiRoot.self, from: jsonData)
