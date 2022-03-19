@@ -6,9 +6,12 @@
 //
 
 import Foundation
-import Combine
 
-class HttpClient {
+protocol HttpClient {
+    func load(urlString:String) async throws -> Data
+}
+
+class UrlSessionHttpClient : HttpClient {
     enum HttpClientError : Error {
         case invalidUrl
         case responseError
@@ -32,7 +35,7 @@ class HttpClient {
     }
 }
 
-class RemotePriceLoader {
+class RemotePriceLoader : PriceLoader {
     let httpClient:HttpClient
     
     init(httpClient: HttpClient) {

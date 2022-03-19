@@ -37,6 +37,7 @@ class RemoteLoaderTest: XCTestCase {
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> RemotePriceLoader {
         let httpClient = makeHttpClient()
         let remotePriceLoader = RemotePriceLoader(httpClient: httpClient)
+        trackForMemoryLeaks(remotePriceLoader, file: file, line: line)
         return remotePriceLoader
     }
     
@@ -45,7 +46,7 @@ class RemoteLoaderTest: XCTestCase {
         configuration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: configuration)
         
-        let sut = HttpClient(session: session)
+        let sut = UrlSessionHttpClient(session: session)
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }

@@ -1,5 +1,5 @@
 //
-//  Price.swift
+//  PriceLocal.swift
 //  PriceWatcher-iOS
 //
 //  Created by Fahim Jatmiko on 19/03/22.
@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Price {
+struct LocalPrice : Codable {
     let pairName: String
     let price: Double
     let date: Date
 }
 
-struct Location {
+struct LocalLocation : Codable {
     let latitude:Double
     let longitude:Double
 }
 
-struct UserActivity {
-    let prices:[Price]
-    let location:Location
+struct LocalUserActivity : Codable {
+    let prices:[LocalPrice]
+    let location:LocalLocation
     let date: Date
 }
