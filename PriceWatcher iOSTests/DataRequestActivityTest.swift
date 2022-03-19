@@ -31,9 +31,9 @@ class DataRequestActivityTest: XCTestCase {
         let jsonData = getSampleJsonData()
         URLProtocolStub.stub(data: jsonData, response: anyHTTPURLResponse(), error: nil)
         
-        try await sut.loadAndCache()
+        try await sut.loadRemotelyAndCache()
         
-        let dataRequests = try await sut.load()
+        let dataRequests = try await sut.loadCache()
         XCTAssert(dataRequests.first!.prices.count == 3)
     }
     

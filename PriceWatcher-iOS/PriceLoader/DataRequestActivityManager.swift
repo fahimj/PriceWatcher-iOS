@@ -8,7 +8,6 @@
 import Foundation
 
 class DataRequestActivityManager {
-    //read data response, save to local,
     let loader:PriceLoader
     let cache:PriceDataRequestActivityCache
     let locationManager:LocationManager
@@ -19,15 +18,14 @@ class DataRequestActivityManager {
         self.locationManager = locationManager
     }
     
-    func loadAndCache() async throws {
+    func loadRemotelyAndCache() async throws {
         let prices = try await loader.load()
         let longitude = locationManager.location?.coordinate.longitude ?? 0.0
         let latitude = locationManager.location?.coordinate.latitude ?? 0.0
         try await cache.save(price: prices, longitude: longitude, latitude: latitude)
-        
     }
     
-    func load() async throws -> [PriceDataRequestActivity] {
+    func loadCache() async throws -> [PriceDataRequestActivity] {
         return try await cache.loadCache()
     }
 }
