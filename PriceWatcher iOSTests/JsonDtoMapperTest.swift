@@ -40,7 +40,7 @@ class PriceWatcher_iOSTests: XCTestCase {
             let result = try sut.mapToPrice(jsonData: data)
             XCTAssertTrue(result.count == 3)
         } catch {
-            XCTFail("Should catch no error")
+            XCTFail("Should catch no error, but found error: \(error.localizedDescription)")
         }
     }
     

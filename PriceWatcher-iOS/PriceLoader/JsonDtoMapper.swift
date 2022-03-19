@@ -14,12 +14,13 @@ struct JsonDtoMapper {
     
     func mapToPrice(jsonData:Data) throws -> [Price] {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         let json = try decoder.decode(CodableBpiRoot.self, from: jsonData)
         guard let bpis = json.bpi else {throw JsonMapperError.invalidJson }
         
         let dtos = [bpis.eur!, bpis.gbp!, bpis.usd!]
         let items = dtos.map{bpi in
-            Price(pairName: "BTC" + bpi.code!, price: bpi.rateFloat!, date: Date())
+            Price(pairName: "BTC" + bpi.code!, price: bpi.rateFloat!, date: json.time!.updatedDate!)
         }
         return items
     }
