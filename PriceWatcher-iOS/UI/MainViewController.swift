@@ -9,12 +9,6 @@ import UIKit
 import Charts
 
 class MainViewController: UITableViewController, MainViewProtocol {
-    func refreshTableView() {
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
-    }
-    
     init(presenter: MainViewPresenter) {
         self.presenter = presenter
         super.init(nibName: "MainViewController", bundle: nil)
@@ -34,6 +28,11 @@ class MainViewController: UITableViewController, MainViewProtocol {
         LineChartView()
     }()
     
+    lazy var refreshButton:UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChart()
@@ -44,17 +43,23 @@ class MainViewController: UITableViewController, MainViewProtocol {
         presenter.refreshTableData()
     }
     
-    private func mapToChartDataEntry(prices:[Price]) -> [ChartDataEntry] {
-        prices.map{price in
-            let secondsPerDay = 24.0 * 3600.0
-            let x = price.date.timeIntervalSince1970 / secondsPerDay
-            return ChartDataEntry(x: x, y: price.value)
+    func refreshTableView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
     func refreshChart(prices:[Price]) {
         let chartEntry = mapToChartDataEntry(prices: prices)
         refreshChart(chartEntry: chartEntry)
+    }
+    
+    private func mapToChartDataEntry(prices:[Price]) -> [ChartDataEntry] {
+        prices.map{price in
+            let secondsPerDay = 24.0 * 3600.0
+            let x = price.date.timeIntervalSince1970 / secondsPerDay
+            return ChartDataEntry(x: x, y: price.value)
+        }
     }
     
     private func refreshChart(chartEntry:[ChartDataEntry]) {
@@ -102,6 +107,8 @@ class MainViewController: UITableViewController, MainViewProtocol {
         //        lineChartView.xAxis.enabled = false
         lineChartView.animate(xAxisDuration: 0.5)
     }
+    
+    // MARK: - Table view Delegate
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section == 0 else { return nil }

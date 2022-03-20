@@ -55,9 +55,10 @@ class MainViewControllerIntegrationTest: XCTestCase {
         let sut = makeSut()
         sut.loadViewIfNeeded()
         
-        Thread.sleep(forTimeInterval: 0.7)
+        Thread.sleep(forTimeInterval: 1)
         
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 5)
+        XCTAssertEqual(6,sut.lineChartView.lineData!.entryCount)
     }
     
     // MARK: Helpers
