@@ -38,7 +38,6 @@
 		CFA3A99027E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */; };
 		CFA3A99227E5E8EC00D00EEB /* LocalLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */; };
 		CFA3A99527E5F87200D00EEB /* LocalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99427E5F87100D00EEB /* LocalPrice.swift */; };
-		CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99627E6059000D00EEB /* LocationProvider.swift */; };
 		CFA3A99B27E6063700D00EEB /* CLLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */; };
 		CFA3A99D27E6127800D00EEB /* DataRequestActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */; };
 		CFA3A99F27E612A600D00EEB /* DataRequestActivityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */; };
@@ -96,7 +95,6 @@
 		CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPriceDataRequestActivityCache.swift; sourceTree = "<group>"; };
 		CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoaderTest.swift; sourceTree = "<group>"; };
 		CFA3A99427E5F87100D00EEB /* LocalPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPrice.swift; sourceTree = "<group>"; };
-		CFA3A99627E6059000D00EEB /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationMock.swift; sourceTree = "<group>"; };
 		CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestActivityManager.swift; sourceTree = "<group>"; };
 		CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestActivityTest.swift; sourceTree = "<group>"; };
@@ -130,14 +128,10 @@
 		CF1ACD0927E580C9004270F9 /* PriceLoader */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3A99327E5F85E00D00EEB /* Local */,
 				CFA3A98327E5CF8500D00EEB /* Domain */,
-				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
-				CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */,
-				CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */,
-				CFA3A99627E6059000D00EEB /* LocationProvider.swift */,
+				CF587B6827E7743D00F5D111 /* Remote */,
+				CFA3A99327E5F85E00D00EEB /* Local */,
 				CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */,
-				CFA3A9A027E627C100D00EEB /* LocalPriceLoader.swift */,
 			);
 			path = PriceLoader;
 			sourceTree = "<group>";
@@ -152,6 +146,25 @@
 				CF1ACD1727E59379004270F9 /* CodableCurrency.swift */,
 			);
 			path = CoinbaseCodable;
+			sourceTree = "<group>";
+		};
+		CF587B6727E7740C00F5D111 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				CFA3A99427E5F87100D00EEB /* LocalPrice.swift */,
+				CF587B4C27E73AB300F5D111 /* LocalLocation.swift */,
+				CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		CF587B6827E7743D00F5D111 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
+				CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		CF5C7C4627E385F200AAC862 = {
@@ -230,9 +243,9 @@
 		CFA3A99327E5F85E00D00EEB /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3A99427E5F87100D00EEB /* LocalPrice.swift */,
-				CF587B4C27E73AB300F5D111 /* LocalLocation.swift */,
-				CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */,
+				CF587B6727E7740C00F5D111 /* DTO */,
+				CFA3A9A027E627C100D00EEB /* LocalPriceLoader.swift */,
+				CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -363,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */,
 				CF587B4D27E73AB300F5D111 /* LocalLocation.swift in Sources */,
 				CF587B5327E74C4C00F5D111 /* SharedTestHelpers.swift in Sources */,
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
