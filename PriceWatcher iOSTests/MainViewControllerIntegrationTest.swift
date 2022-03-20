@@ -59,6 +59,10 @@ class MainViewControllerIntegrationTest: XCTestCase {
         
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 5)
         XCTAssertEqual(6,sut.lineChartView.lineData!.entryCount)
+        
+        let cell = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! ActivityTableViewCell
+        XCTAssertEqual(cell.latitudeLabel.text, "Latitude: 37.3317")
+        XCTAssert(cell.priceLabel.text!.contains("Price:"))
     }
     
     func test_TapRefreshButton_ShowRefreshedDataFromLocal() {
