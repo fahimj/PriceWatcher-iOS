@@ -14,6 +14,10 @@
 		CF1ACD1427E592B2004270F9 /* CodableBpiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */; };
 		CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1527E59352004270F9 /* CodableTime.swift */; };
 		CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1ACD1727E59379004270F9 /* CodableCurrency.swift */; };
+		CF587B4927E73A6B00F5D111 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4827E73A6B00F5D111 /* Location.swift */; };
+		CF587B4B27E73A8300F5D111 /* PriceDataRequestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4A27E73A8300F5D111 /* PriceDataRequestActivity.swift */; };
+		CF587B4D27E73AB300F5D111 /* LocalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4C27E73AB300F5D111 /* LocalLocation.swift */; };
+		CF587B4F27E73ABF00F5D111 /* LocalDataRequestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */; };
 		CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5227E385F200AAC862 /* AppDelegate.swift */; };
 		CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */; };
 		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
@@ -26,7 +30,7 @@
 		CFA3A98E27E5DDE300D00EEB /* RemoteLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */; };
 		CFA3A99027E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */; };
 		CFA3A99227E5E8EC00D00EEB /* LocalLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */; };
-		CFA3A99527E5F87200D00EEB /* PriceLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99427E5F87100D00EEB /* PriceLocal.swift */; };
+		CFA3A99527E5F87200D00EEB /* LocalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99427E5F87100D00EEB /* LocalPrice.swift */; };
 		CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99627E6059000D00EEB /* LocationProvider.swift */; };
 		CFA3A99B27E6063700D00EEB /* CLLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */; };
 		CFA3A99D27E6127800D00EEB /* DataRequestActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */; };
@@ -58,6 +62,10 @@
 		CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBpiRoot.swift; sourceTree = "<group>"; };
 		CF1ACD1527E59352004270F9 /* CodableTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTime.swift; sourceTree = "<group>"; };
 		CF1ACD1727E59379004270F9 /* CodableCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableCurrency.swift; sourceTree = "<group>"; };
+		CF587B4827E73A6B00F5D111 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CF587B4A27E73A8300F5D111 /* PriceDataRequestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDataRequestActivity.swift; sourceTree = "<group>"; };
+		CF587B4C27E73AB300F5D111 /* LocalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocation.swift; sourceTree = "<group>"; };
+		CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataRequestActivity.swift; sourceTree = "<group>"; };
 		CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +81,7 @@
 		CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoaderTest.swift; sourceTree = "<group>"; };
 		CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPriceDataRequestActivityCache.swift; sourceTree = "<group>"; };
 		CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoaderTest.swift; sourceTree = "<group>"; };
-		CFA3A99427E5F87100D00EEB /* PriceLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLocal.swift; sourceTree = "<group>"; };
+		CFA3A99427E5F87100D00EEB /* LocalPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPrice.swift; sourceTree = "<group>"; };
 		CFA3A99627E6059000D00EEB /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationMock.swift; sourceTree = "<group>"; };
 		CFA3A99C27E6127800D00EEB /* DataRequestActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestActivityManager.swift; sourceTree = "<group>"; };
@@ -111,7 +119,6 @@
 				CFA3A99327E5F85E00D00EEB /* Local */,
 				CFA3A98327E5CF8500D00EEB /* Domain */,
 				CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */,
-				CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */,
 				CFA3A98427E5CFBD00D00EEB /* RemotePriceLoader.swift */,
 				CFA3A98F27E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift */,
 				CFA3A99627E6059000D00EEB /* LocationProvider.swift */,
@@ -124,6 +131,7 @@
 		CF1ACD0E27E585B3004270F9 /* CoinbaseCodable */ = {
 			isa = PBXGroup;
 			children = (
+				CF1ACD1127E587F9004270F9 /* CoinbaseJsonDtoMapper.swift */,
 				CF1ACD0F27E58661004270F9 /* BPICodable.swift */,
 				CF1ACD1327E592B2004270F9 /* CodableBpiRoot.swift */,
 				CF1ACD1527E59352004270F9 /* CodableTime.swift */,
@@ -181,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				CF1ACD0C27E5853A004270F9 /* Price.swift */,
+				CF587B4827E73A6B00F5D111 /* Location.swift */,
+				CF587B4A27E73A8300F5D111 /* PriceDataRequestActivity.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -199,7 +209,9 @@
 		CFA3A99327E5F85E00D00EEB /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				CFA3A99427E5F87100D00EEB /* PriceLocal.swift */,
+				CFA3A99427E5F87100D00EEB /* LocalPrice.swift */,
+				CF587B4C27E73AB300F5D111 /* LocalLocation.swift */,
+				CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -326,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */,
+				CF587B4D27E73AB300F5D111 /* LocalLocation.swift in Sources */,
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
-				CFA3A99527E5F87200D00EEB /* PriceLocal.swift in Sources */,
+				CFA3A99527E5F87200D00EEB /* LocalPrice.swift in Sources */,
 				CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */,
+				CF587B4B27E73A8300F5D111 /* PriceDataRequestActivity.swift in Sources */,
 				CF1ACD1227E587F9004270F9 /* CoinbaseJsonDtoMapper.swift in Sources */,
 				CFA3A99B27E6063700D00EEB /* CLLocationMock.swift in Sources */,
 				CFA3A9A127E627C100D00EEB /* LocalPriceLoader.swift in Sources */,
@@ -337,8 +351,10 @@
 				CFA3A99D27E6127800D00EEB /* DataRequestActivityManager.swift in Sources */,
 				CF1ACD1027E58661004270F9 /* BPICodable.swift in Sources */,
 				CF1ACD1827E59379004270F9 /* CodableCurrency.swift in Sources */,
+				CF587B4F27E73ABF00F5D111 /* LocalDataRequestActivity.swift in Sources */,
 				CFA3A98527E5CFBD00D00EEB /* RemotePriceLoader.swift in Sources */,
 				CF1ACD1627E59352004270F9 /* CodableTime.swift in Sources */,
+				CF587B4927E73A6B00F5D111 /* Location.swift in Sources */,
 				CFD2032027E40345004B69B3 /* MainViewController.swift in Sources */,
 				CFA3A9A327E62AF900D00EEB /* MainViewPresenter.swift in Sources */,
 				CFA3A99027E5E19100D00EEB /* LocalPriceDataRequestActivityCache.swift in Sources */,
