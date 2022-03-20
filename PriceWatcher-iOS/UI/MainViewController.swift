@@ -10,7 +10,9 @@ import Charts
 
 class MainViewController: UITableViewController, MainViewProtocol {
     func refreshTableView() {
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     init(presenter: MainViewPresenter) {
@@ -20,6 +22,10 @@ class MainViewController: UITableViewController, MainViewProtocol {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        presenter.mainView = nil
     }
     
     let presenter: MainViewPresenter

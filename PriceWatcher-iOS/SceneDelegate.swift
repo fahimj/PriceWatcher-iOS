@@ -20,18 +20,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let locationManager = CLLocationManager()
         locationManager.requestAlwaysAuthorization()
         
-        let window = UIWindow(windowScene: windowScene)
-        let localPriceSeriesLoader = LocalPriceSeriesLoader()
+//        let window = UIWindow(windowScene: windowScene)
+//        let localPriceSeriesLoader = LocalPriceSeriesLoader()
         //        let urlSessionHttpClient = UrlSessionHttpClient(session: URLSession.shared)
         //        let remotePriceLoader = RemotePriceLoader(httpClient: urlSessionHttpClient)
-        let localPriceDataRequestActivityCache = LocalPriceDataRequestActivityCache()
+//        let localPriceDataRequestActivityCache = LocalPriceDataRequestActivityCache()
         //        let dataRequestActivityManager = DataRequestActivityManager(loader: remotePriceLoader, cache: LocalPriceDataRequestActivityCache(), locationManager: locationManager)
-        let presenter = MainViewPresenter(priceSeriesLoader: localPriceSeriesLoader, cache: localPriceDataRequestActivityCache)
-        let mainViewController = MainViewController(presenter: presenter)
-        presenter.mainView = mainViewController
-        window.rootViewController =  mainViewController// Your initial view controller.
-        window.makeKeyAndVisible()
-        self.window = window
+//        let presenter = MainViewPresenter(priceSeriesLoader: localPriceSeriesLoader, cache: localPriceDataRequestActivityCache)
+//        let mainViewController = MainViewController(presenter: presenter)
+//        presenter.mainView = mainViewController
+//        window.rootViewController =  mainViewController// Your initial view controller.
+//        window.makeKeyAndVisible()
+//        self.window = window
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

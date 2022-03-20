@@ -18,6 +18,13 @@
 		CF587B4B27E73A8300F5D111 /* PriceDataRequestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4A27E73A8300F5D111 /* PriceDataRequestActivity.swift */; };
 		CF587B4D27E73AB300F5D111 /* LocalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4C27E73AB300F5D111 /* LocalLocation.swift */; };
 		CF587B4F27E73ABF00F5D111 /* LocalDataRequestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */; };
+		CF587B5127E73B7B00F5D111 /* MainViewControllerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B5027E73B7B00F5D111 /* MainViewControllerIntegrationTest.swift */; };
+		CF587B5327E74C4C00F5D111 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF587B5227E74C4C00F5D111 /* SharedTestHelpers.swift */; };
+		CF587B5627E762F600F5D111 /* currentprice2.json in Resources */ = {isa = PBXBuildFile; fileRef = CF587B5427E7621400F5D111 /* currentprice2.json */; };
+		CF587B6027E7677C00F5D111 /* currentprice3.json in Resources */ = {isa = PBXBuildFile; fileRef = CF587B5F27E7674F00F5D111 /* currentprice3.json */; };
+		CF587B6127E7678100F5D111 /* currentprice4.json in Resources */ = {isa = PBXBuildFile; fileRef = CF587B5927E764BB00F5D111 /* currentprice4.json */; };
+		CF587B6427E768BD00F5D111 /* currentprice5.json in Resources */ = {isa = PBXBuildFile; fileRef = CF587B6227E768AF00F5D111 /* currentprice5.json */; };
+		CF587B6627E768D000F5D111 /* currentprice6.json in Resources */ = {isa = PBXBuildFile; fileRef = CF587B6527E768D000F5D111 /* currentprice6.json */; };
 		CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5227E385F200AAC862 /* AppDelegate.swift */; };
 		CF5C7C5527E385F200AAC862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */; };
 		CF5C7C5C27E385F300AAC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C7C5B27E385F300AAC862 /* Assets.xcassets */; };
@@ -66,6 +73,13 @@
 		CF587B4A27E73A8300F5D111 /* PriceDataRequestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDataRequestActivity.swift; sourceTree = "<group>"; };
 		CF587B4C27E73AB300F5D111 /* LocalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLocation.swift; sourceTree = "<group>"; };
 		CF587B4E27E73ABF00F5D111 /* LocalDataRequestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataRequestActivity.swift; sourceTree = "<group>"; };
+		CF587B5027E73B7B00F5D111 /* MainViewControllerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerIntegrationTest.swift; sourceTree = "<group>"; };
+		CF587B5227E74C4C00F5D111 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		CF587B5427E7621400F5D111 /* currentprice2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice2.json; sourceTree = "<group>"; };
+		CF587B5927E764BB00F5D111 /* currentprice4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice4.json; sourceTree = "<group>"; };
+		CF587B5F27E7674F00F5D111 /* currentprice3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice3.json; sourceTree = "<group>"; };
+		CF587B6227E768AF00F5D111 /* currentprice5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice5.json; sourceTree = "<group>"; };
+		CF587B6527E768D000F5D111 /* currentprice6.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentprice6.json; sourceTree = "<group>"; };
 		CF5C7C4F27E385F200AAC862 /* PriceWatcher-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PriceWatcher-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7C5227E385F200AAC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C7C5427E385F200AAC862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +195,7 @@
 				CFA3A98D27E5DDE300D00EEB /* RemoteLoaderTest.swift */,
 				CFA3A99127E5E8EC00D00EEB /* LocalLoaderTest.swift */,
 				CFA3A99E27E612A600D00EEB /* DataRequestActivityTest.swift */,
+				CF587B5027E73B7B00F5D111 /* MainViewControllerIntegrationTest.swift */,
 			);
 			path = "PriceWatcher iOSTests";
 			sourceTree = "<group>";
@@ -199,9 +214,15 @@
 			isa = PBXGroup;
 			children = (
 				CF1ACD0A27E584F2004270F9 /* currentprice.json */,
+				CF587B5427E7621400F5D111 /* currentprice2.json */,
+				CF587B5F27E7674F00F5D111 /* currentprice3.json */,
+				CF587B5927E764BB00F5D111 /* currentprice4.json */,
+				CF587B6227E768AF00F5D111 /* currentprice5.json */,
+				CF587B6527E768D000F5D111 /* currentprice6.json */,
 				CFA3A98927E5D4EE00D00EEB /* URLProtocolStub.swift */,
 				CFA3A98B27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift */,
 				CFA3A99A27E6063700D00EEB /* CLLocationMock.swift */,
+				CF587B5227E74C4C00F5D111 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -326,7 +347,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF587B6627E768D000F5D111 /* currentprice6.json in Resources */,
+				CF587B6127E7678100F5D111 /* currentprice4.json in Resources */,
+				CF587B6027E7677C00F5D111 /* currentprice3.json in Resources */,
+				CF587B5627E762F600F5D111 /* currentprice2.json in Resources */,
 				CF1ACD0B27E584F2004270F9 /* currentprice.json in Resources */,
+				CF587B6427E768BD00F5D111 /* currentprice5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +365,7 @@
 			files = (
 				CFA3A99727E6059000D00EEB /* LocationProvider.swift in Sources */,
 				CF587B4D27E73AB300F5D111 /* LocalLocation.swift in Sources */,
+				CF587B5327E74C4C00F5D111 /* SharedTestHelpers.swift in Sources */,
 				CF5C7C5327E385F200AAC862 /* AppDelegate.swift in Sources */,
 				CFA3A99527E5F87200D00EEB /* LocalPrice.swift in Sources */,
 				CF1ACD0D27E5853A004270F9 /* Price.swift in Sources */,
@@ -369,6 +396,7 @@
 				CFA3A99F27E612A600D00EEB /* DataRequestActivityTest.swift in Sources */,
 				CFA3A99227E5E8EC00D00EEB /* LocalLoaderTest.swift in Sources */,
 				CFA3A98727E5D42C00D00EEB /* HttpClientTest.swift in Sources */,
+				CF587B5127E73B7B00F5D111 /* MainViewControllerIntegrationTest.swift in Sources */,
 				CFA3A98C27E5D53100D00EEB /* XCTest+MemoryLeakTracking.swift in Sources */,
 				CFA3A98A27E5D4EE00D00EEB /* URLProtocolStub.swift in Sources */,
 				CFA3A98E27E5DDE300D00EEB /* RemoteLoaderTest.swift in Sources */,

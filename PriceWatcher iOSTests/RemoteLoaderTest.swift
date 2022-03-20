@@ -57,25 +57,4 @@ class RemoteLoaderTest: XCTestCase {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         return data
     }
-    
-    func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 0)
-    }
-
-    func anyURL() -> URL {
-        return URL(string: "http://any-url.com")!
-    }
-
-    func anyData() -> Data {
-        return Data("any data".utf8)
-    }
-    
-    private func anyHTTPURLResponse() -> HTTPURLResponse {
-        return HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
-    }
-    
-    private func nonHTTPURLResponse() -> URLResponse {
-        return URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
-    }
-
 }
