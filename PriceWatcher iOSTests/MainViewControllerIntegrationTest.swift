@@ -61,6 +61,31 @@ class MainViewControllerIntegrationTest: XCTestCase {
         XCTAssertEqual(6,sut.lineChartView.lineData!.entryCount)
     }
     
+    func test_TapRefreshButton_ShowRefreshedDataFromLocal() {
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice"))
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice2"))
+        
+        let sut = makeSut()
+        sut.loadViewIfNeeded()
+        
+        Thread.sleep(forTimeInterval: 0.3)
+        
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(sut.lineChartView.lineData!.entryCount, 2)
+        
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice3"))
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice4"))
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice5"))
+        fetchRemotellyAndSaveDataToLocal(with: getSampleJsonData(fileName: "currentprice6"))
+        
+        sut.refreshButton.sendActions(for: .touchUpInside)
+        
+        Thread.sleep(forTimeInterval: 0.4)
+        
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 5)
+        XCTAssertEqual(sut.lineChartView.lineData!.entryCount, 6)
+    }
+    
     // MARK: Helpers
     
     private func makeSut(file: StaticString = #filePath, line: UInt = #line) -> MainViewController {

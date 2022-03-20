@@ -30,8 +30,16 @@ class MainViewController: UITableViewController, MainViewProtocol {
     
     lazy var refreshButton:UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(someButtonAction), for: .touchUpInside)
+        button.backgroundColor = .blue
+        button.setTitle("Refresh", for: .normal)
         return button
     }()
+    
+    @objc private func someButtonAction() {
+        presenter.refreshChart()
+        presenter.refreshTableData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +52,7 @@ class MainViewController: UITableViewController, MainViewProtocol {
     }
     
     func refreshTableView() {
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
+            self.tableView.reloadData()
     }
     
     func refreshChart(prices:[Price]) {
