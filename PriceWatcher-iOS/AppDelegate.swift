@@ -14,29 +14,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         registerBackgroundTask()
+        
+        //setup foreground timer
+        Timer.scheduledTimer(timeInterval: 60 * 60, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         return true
+    }
+    
+    @objc func timerAction() {
+        Task {
+            do {
+                try await self.fetchAndCacheTask()
+            }
+            catch {
+            }
+        }
+    }
+    
+    func fetchAndCacheTask() async throws {
+        let locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
+        let urlSessionHttpClient = UrlSessionHttpClient(session: URLSession.shared)
+        let remotePriceLoader = RemotePriceLoader(httpClient: urlSessionHttpClient)
+        let dataRequestActivityManager = DataRequestActivityManager(loader: remotePriceLoader, cache: LocalPriceDataRequestActivityCache(), locationManager: locationManager)
+        try await dataRequestActivityManager.loadRemotelyAndCache()
     }
     
     func registerBackgroundTask() {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.fahim.PriceWatcher-iOS.fetchAndCache", using: nil) { task in
             self.scheduleAppRefresh()
             
-            let locationManager = CLLocationManager()
-            locationManager.requestAlwaysAuthorization()
-            let urlSessionHttpClient = UrlSessionHttpClient(session: URLSession.shared)
-            let remotePriceLoader = RemotePriceLoader(httpClient: urlSessionHttpClient)
-            let dataRequestActivityManager = DataRequestActivityManager(loader: remotePriceLoader, cache: LocalPriceDataRequestActivityCache(), locationManager: locationManager)
             Task {
                 do {
-                    try await dataRequestActivityManager.loadRemotelyAndCache()
+                    try await self.fetchAndCacheTask()
                     task.setTaskCompleted(success: true)
                 }
                 catch {
                     task.setTaskCompleted(success: false)
                 }
-                
             }
-            
         }
         
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.fahim.PriceWatcher-iOS.removeCache", using: nil) { task in
@@ -76,21 +91,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-
+    
     // MARK: UISceneSession Lifecycle
-
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    
 }
 
