@@ -127,7 +127,7 @@ class MainViewController: UITableViewController, MainViewProtocol {
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard section == 0 else { return nil }
-        return UIButton()
+        return refreshButton
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
